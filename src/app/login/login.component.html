@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="image">
+    <img src="assets/images/artigo-sobre-milhas.png" alt="Imagem de Login">
+  </div>
+
+  <div class="form card card-custom">
+    <h2 class="card-title">Acesse sua conta</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" name="cpf" placeholder="CPF" required [(ngModel)]="cpfUser" (ngModelChange)="resetErrorMessage()">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" name="senha" placeholder="Senha" required [(ngModel)]="password" (ngModelChange)="resetErrorMessage()">
+      </div>
+      <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+      <button type="submit" class="btn btn-success" (click)="login()">Entrar</button>
+    </form>
+    <div class="forgot-password">
+      <a href="#">Esqueci minha senha</a>
+    </div>
+  </div>
+</div>
+
